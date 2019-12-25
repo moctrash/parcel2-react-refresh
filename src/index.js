@@ -15,22 +15,4 @@ const App = () => {
     )
 }
 
-
-// interface IAppState {
-//     content: string
-// }
-
-// class App extends React.Component<{}, IAppState> {
-//     state = {
-//         content: "asdf"
-//     }
-
-//     updateContent = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
-//         this.setState({content: e.target.value})
-//     }
-//     render() {
-//         return <div><div>Hello from React!</div><MyComponent /><div><textarea value={this.state.content} onChange={this.updateContent} /></div></div>
-//     }
-// }
-
 ReactDOM.render(<App />, document.getElementById("root"));
