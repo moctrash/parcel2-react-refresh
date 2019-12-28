@@ -19,5 +19,5 @@ If it works, the components will reload without blowing away the state changes f
 It doesn't appear to work in any of the following circumstances. In these cases, changes to the `ChildComponent` will cause a full page refresh (blowing away state)
  - If the files containing the components have a `.jsx` extension (see `broken-jsx` branch)
  - If a `tsconfig.json` file is present, including cases where:
-   - the files are actually still `.js` (see `broken-js` branch).
+   - the files are still `.js` (see `broken-js` branch).
    - the files are actually typescript (`.ts` or `.tsx`) (see `broken-ts` branch).
