@@ -13,11 +13,9 @@ This repo is an attempt to kick the tires and understand how it works. It was ba
 If it works, the components will reload without blowing away the state changes from step #3. If it doesn't work, the whole page will refresh.
 
 ### Working config:
- If the files containing the components are named with the `.js` extension, and there is no `.tsconfig.json` file present, it works. (Sweet!). This configuration is in the `master` branch.
+ If the files containing the components are named with the `.js` extension, it works. (Sweet!). This configuration is in the `master` branch.
 
 ### Broken configs:
-It doesn't appear to work in any of the following circumstances. In these cases, changes to the `ChildComponent` will cause a full page refresh (blowing away state)
- - If the files containing the components have a `.jsx` extension (see `broken-jsx` branch)
- - If a `tsconfig.json` file is present, including cases where:
-   - the files are still `.js` (see `broken-js` branch).
-   - the files are actually typescript (`.ts` or `.tsx`) (see `broken-ts` branch).
+It doesn't appear to work if...
+ - ...the files containing the components have a `.jsx` extension (see `broken-jsx` branch).
+ - ...the project is configured for typescript and the files containing the components must have a `.tsx` extension (see `broken-tsx` branch).
