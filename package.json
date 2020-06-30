@@ -5,7 +5,7 @@
   "main": "src/main.js",
   "scripts": {
     "build": "rimraf .parcel-cache && parcel build src/index.html",
-    "start": "rimraf .parcel-cache && parcel src/index.html  -p 3000 & yarn open-electron",
+    "start": "rimraf .parcel-cache && parcel src/index.html  -p 3000 --target=react-renderer & yarn open-electron",
     "open-electron": "wait-on http://localhost:3000 && electron ."
   },
   "author": "",
@@ -17,6 +17,11 @@
     "rimraf": "^3.0.0",
     "electron": "^9.0.5",
     "wait-on": "5.0.1"
+  },
+  "targets": {
+    "react-renderer": {
+      "context": "electron-renderer"
+    }
   },
   "dependencies": {
     "react": "^16.13.1",
