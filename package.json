@@ -2,21 +2,25 @@
   "name": "parcel-typescript",
   "version": "1.0.0",
   "description": "",
+  "main": "src/main.js",
   "scripts": {
     "build": "rimraf .parcel-cache && parcel build src/index.html",
-    "start": "rimraf .parcel-cache && parcel src/index.html"
+    "start": "rimraf .parcel-cache && parcel src/index.html  -p 3000 & yarn open-electron",
+    "open-electron": "wait-on http://localhost:3000 && electron ."
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@types/react": "^16.9.17",
-    "@types/react-dom": "^16.9.4",
-    "parcel": "^2.0.0-alpha.3.2",
+    "@types/react": "^16.9.41",
+    "@types/react-dom": "^16.9.8",
+    "parcel": "^2.0.0-beta-1",
     "rimraf": "^3.0.0",
-    "typescript": "^3.7.4"
+    "electron": "^9.0.5",
+    "wait-on": "5.0.1"
   },
   "dependencies": {
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0"
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "electron-is-dev": "^1.2.0"
   }
 }
