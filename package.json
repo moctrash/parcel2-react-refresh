@@ -15,7 +15,7 @@
     "@types/react-dom": "^16.9.8",
     "parcel": "^2.0.0-beta-1",
     "rimraf": "^3.0.0",
-    "electron": "^9.0.5",
+    "electron": "^9.3.1",
     "wait-on": "5.0.1"
   },
   "targets": {
